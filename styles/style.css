@@ -67,7 +67,6 @@ a {
     overflow: hidden;
     max-width: 21rem;
     width: 100%;
-    min-height: 29.625rem;
     padding: 1.5rem;
     box-sizing: border-box;
     margin: auto;
@@ -181,7 +180,6 @@ a {
 
     .blog_card {
         max-width: 17.4375rem;
-        min-height: 28.3125rem;
     }
 
     .card_img {
@@ -206,4 +204,5 @@ a {
     .blog_author span {
         font-size: 0.875rem;
     }
+
 }
