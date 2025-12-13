@@ -26,12 +26,12 @@
 }
 
 /* ===================================
-   BASE STYLES (Mobile First)
+   BASE STYLES
    =================================== */
 body {
     margin: 0;
     font-family: 'Figtree', sans-serif;
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
     font-weight: 500;
     line-height: 1.5;
     background-color: var(--yellow);
@@ -54,7 +54,6 @@ a {
     min-height: 100vh;
     flex-direction: column;
     box-sizing: border-box;
-    margin: auto;
 }
 
 /* ===================================
@@ -66,10 +65,11 @@ a {
     border-radius: 1.25rem;
     box-shadow: 0.5rem 0.5rem 0 0 var(--gray-950);
     overflow: hidden;
-    max-width: 20rem;
+    max-width: 21rem;
     width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .blog_card:hover {
@@ -96,32 +96,32 @@ a {
 /* Category badge */
 .category {
     background-color: var(--yellow);
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
     font-weight: 800;
     margin: 0 0 0.75rem 0;
-    padding: 0.25rem 0.75rem;
+    width: 5.125rem;
+    height: 1.8125rem;
     border-radius: 0.3125rem;
     color: var(--gray-950);
+    padding: 0.25rem 0.75rem;
 }
 
 /* Publication date */
 .card_content .publish_date {
     color: var(--gray-950);
     margin-block-end: 0.75rem;
-    font-size: 0.875rem;
 }
 
 /* Article title */
 .card_content .title {
-    font-size: 1.25rem;
+    font-size: clamp(1.5rem, 1rem + 1.2vw, 2rem);
     font-weight: 800;
     color: var(--gray-950);
     margin: 0 0 0.75rem 0;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .card_content .title:hover {
@@ -132,9 +132,7 @@ a {
 /* Article description */
 .card_content .description {
     margin: 0;
-    font-size: 0.875rem;
     color: var(--gray-500);
-    line-height: 1.5;
 }
 
 /* ===================================
@@ -154,16 +152,16 @@ a {
 }
 
 .blog_author span {
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);   
     font-weight: 800;
     color: var(--gray-950);
-    font-size: 0.875rem;
 }
 
 /* ===================================
    FOOTER / ATTRIBUTION
    =================================== */
 .attribution {
-    font-size: 0.6875rem;
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);   
     text-align: center;
     margin-block-start: 1rem;
     width: 100%;
@@ -173,21 +171,12 @@ a {
    RESPONSIVE DESIGN
    =================================== */
 
-/* Tablet and Desktop */
+/* Tablet and desktop */
 @media (min-width: 26.25rem) {
-    .blog_card {
-        max-width: 21rem;
+    .blog_card{
+        max-width: 24rem;
     }
-
-    .category {
-        font-size: 0.875rem;
-    }
-
-    .card_content .title {
-        font-size: 1.5rem;
-    }
-
-    .card_content .description {
-        font-size: 1rem;
+    .card_img {
+        background-image: url('../assets/images/illustration-article.svg');
     }
 }
