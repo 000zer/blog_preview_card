@@ -65,9 +65,9 @@ a {
     border-radius: 1.25rem;
     box-shadow: 0.5rem 0.5rem 0 0 var(--color-gray-950);
     overflow: hidden;
-    max-width: 21rem;
+    max-width: clamp(20rem, 90%, 24rem);
     width: 100%;
-    padding: 1.5rem;
+    padding: clamp(1rem, 1vw + 0.5rem, 1.5rem);
     box-sizing: border-box;
     margin: auto;
 }
@@ -169,9 +169,6 @@ a {
 
 /* Tablet and desktop */
 @media (min-width: 26.25rem) {
-    .blog_card{
-        max-width: 24rem;
-    }
     .card_img {
         background-image: url('../assets/images/illustration-article.svg');
     }
